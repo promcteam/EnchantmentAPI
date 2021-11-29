@@ -2,9 +2,9 @@ package com.sucy.enchant.listener;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import com.rit.sucy.config.CommentedConfig;
-import com.rit.sucy.config.parse.DataSection;
-import com.rit.sucy.items.ItemManager;
+import mc.promcteam.engine.mccore.config.CommentedConfig;
+import mc.promcteam.engine.mccore.config.parse.DataSection;
+import mc.promcteam.engine.mccore.items.ItemManager;
 import com.sucy.enchant.EnchantmentAPI;
 import com.sucy.enchant.api.Enchantments;
 import com.sucy.enchant.api.GlowEffects;

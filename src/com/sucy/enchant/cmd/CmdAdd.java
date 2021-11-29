@@ -1,8 +1,8 @@
 package com.sucy.enchant.cmd;
 
-import com.rit.sucy.commands.CommandManager;
-import com.rit.sucy.commands.ConfigurableCommand;
-import com.rit.sucy.commands.IFunction;
+import mc.promcteam.engine.mccore.commands.CommandManager;
+import mc.promcteam.engine.mccore.commands.ConfigurableCommand;
+import mc.promcteam.engine.mccore.commands.IFunction;
 import com.sucy.enchant.EnchantmentAPI;
 import com.sucy.enchant.api.CustomEnchantment;
 import com.sucy.enchant.api.Enchantments;

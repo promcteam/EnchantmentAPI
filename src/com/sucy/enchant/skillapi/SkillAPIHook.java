@@ -1,7 +1,7 @@
 package com.sucy.enchant.skillapi;
 
 import com.google.common.collect.ImmutableList;
-import com.rit.sucy.config.CommentedConfig;
+import mc.promcteam.engine.mccore.config.CommentedConfig;
 import com.sucy.enchant.EnchantmentAPI;
 import com.sucy.enchant.api.CustomEnchantment;
 import org.bukkit.Bukkit;

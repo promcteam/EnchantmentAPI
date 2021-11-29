@@ -1,6 +1,6 @@
 package com.sucy.enchant;
 
-import com.rit.sucy.commands.CommandManager;
+import mc.promcteam.engine.mccore.commands.CommandManager;
 import com.sucy.enchant.api.CustomEnchantment;
 import com.sucy.enchant.api.EnchantPlugin;
 import com.sucy.enchant.api.EnchantmentRegistry;
@@ -27,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 /**
  * EnchantmentAPI © 2017

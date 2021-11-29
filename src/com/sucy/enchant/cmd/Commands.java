@@ -1,8 +1,8 @@
 package com.sucy.enchant.cmd;
 
-import com.rit.sucy.commands.CommandManager;
-import com.rit.sucy.commands.ConfigurableCommand;
-import com.rit.sucy.commands.SenderType;
+import mc.promcteam.engine.mccore.commands.CommandManager;
+import mc.promcteam.engine.mccore.commands.ConfigurableCommand;
+import mc.promcteam.engine.mccore.commands.SenderType;
 import com.sucy.enchant.EnchantmentAPI;
 
 /**

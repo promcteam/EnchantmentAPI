@@ -1,9 +1,9 @@
 package com.sucy.enchant.api;
 
 import com.google.common.collect.ImmutableList;
-import com.rit.sucy.config.CommentedConfig;
-import com.rit.sucy.config.parse.DataSection;
-import com.rit.sucy.text.TextFormatter;
+import mc.promcteam.engine.mccore.config.CommentedConfig;
+import mc.promcteam.engine.mccore.config.parse.DataSection;
+import mc.promcteam.engine.mccore.util.TextFormatter;
 import com.sucy.enchant.EnchantmentAPI;
 import com.sucy.enchant.data.Permission;
 import com.sucy.enchant.util.LoreReader;

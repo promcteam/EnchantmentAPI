@@ -1,6 +1,6 @@
 package com.sucy.enchant.listener;
 
-import com.rit.sucy.text.TextFormatter;
+import mc.promcteam.engine.mccore.util.TextFormatter;
 import com.sucy.enchant.data.ConfigKey;
 import com.sucy.enchant.data.Configuration;
 import com.sucy.enchant.mechanics.EnchantmentMerger;

@@ -1,7 +1,7 @@
 package com.sucy.enchant.data;
 
-import com.rit.sucy.config.CommentedConfig;
-import com.rit.sucy.config.parse.DataSection;
+import mc.promcteam.engine.mccore.config.CommentedConfig;
+import mc.promcteam.engine.mccore.config.parse.DataSection;
 import com.sucy.enchant.EnchantmentAPI;
 
 /**

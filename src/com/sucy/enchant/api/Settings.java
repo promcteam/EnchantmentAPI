@@ -1,6 +1,6 @@
 package com.sucy.enchant.api;
 
-import com.rit.sucy.config.parse.DataSection;
+import mc.promcteam.engine.mccore.config.parse.DataSection;
 
 /**
  * EnchantmentAPI © 2017

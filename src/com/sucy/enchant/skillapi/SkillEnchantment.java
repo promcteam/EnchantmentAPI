@@ -1,6 +1,6 @@
 package com.sucy.enchant.skillapi;
 
-import com.rit.sucy.config.parse.DataSection;
+import mc.promcteam.engine.mccore.config.parse.DataSection;
 import com.sucy.enchant.api.Cooldowns;
 import com.sucy.enchant.api.CustomEnchantment;
 import com.sucy.skill.SkillAPI;
