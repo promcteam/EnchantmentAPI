@@ -2,6 +2,7 @@ package com.sucy.enchant.listener;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import mc.promcteam.engine.core.Version;
 import mc.promcteam.engine.mccore.config.CommentedConfig;
 import mc.promcteam.engine.mccore.config.parse.DataSection;
 import mc.promcteam.engine.mccore.items.ItemManager;
@@ -29,6 +30,7 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.inventory.EnchantingInventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -120,9 +122,9 @@ public class EnchantListener extends BaseListener {
                 event.getEnchanter(), item, event.getExpLevelCost(), true, seed);
 
         event.setCancelled(true);
+        if (result.getEnchantments().size() == 0) { return; }
         placeholders.remove(event.getEnchanter().getUniqueId());
         event.getEnchantsToAdd().clear();
-        if (result.getEnchantments().size() == 0) { return; }
         result.getEnchantments().forEach((enchant, level) -> enchant.addToItem(item, level));
         GlowEffects.finalize(item);
         enchantSeeds.put(event.getEnchanter().getUniqueId(), random.nextLong());
@@ -135,7 +137,10 @@ public class EnchantListener extends BaseListener {
                 if (tiers[i] == event.getExpLevelCost()) cost = tiers[i + 1];
             }
             event.getEnchanter().setLevel(event.getEnchanter().getLevel() - cost);
-            event.getInventory().removeItem(new ItemStack(ItemSet.INK_SACK.getItems()[0], cost, (short) 4));
+            EnchantingInventory inventory = (EnchantingInventory) event.getInventory();
+            ItemStack lapis = inventory.getSecondary();
+            lapis.setAmount(lapis.getAmount()-cost);
+            inventory.setSecondary(lapis);
         }
     }
 

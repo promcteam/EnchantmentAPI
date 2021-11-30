@@ -1,4 +1,4 @@
-name: EnchantmentAPI
+name: ProEnchantmentAPI
 main: com.sucy.enchant.EnchantmentAPI
 version: 1.0-SNAPSHOT
 depend: [ProMCCore]
