@@ -3,6 +3,7 @@ package com.sucy.enchant.cmd;
 import mc.promcteam.engine.mccore.commands.ConfigurableCommand;
 import mc.promcteam.engine.mccore.commands.IFunction;
 import com.sucy.enchant.EnchantmentAPI;
+import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -23,5 +24,6 @@ public class CmdReload implements IFunction {
         final EnchantmentAPI enchantmentAPI = JavaPlugin.getPlugin(EnchantmentAPI.class);
         enchantmentAPI.onDisable();
         enchantmentAPI.onEnable();
+        commandSender.sendMessage(ChatColor.GREEN+"ProEnchantmentAPI has been reloaded!");
     }
 }

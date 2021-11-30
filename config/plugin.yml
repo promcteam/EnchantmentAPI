@@ -4,6 +4,7 @@ version: 1.0-SNAPSHOT
 depend: [ProMCCore]
 softdepend: [ProSkillAPI]
 api-version: 1.17
+authors: [Eniripsa96, Sentropic]
 
 permissions:
     EnchantmentAPI.list:

@@ -119,13 +119,14 @@ public class EnchantListener extends BaseListener {
         final EnchantResult result = mechanics.generateEnchantments(
                 event.getEnchanter(), item, event.getExpLevelCost(), true, seed);
 
+        event.setCancelled(true);
         placeholders.remove(event.getEnchanter().getUniqueId());
         event.getEnchantsToAdd().clear();
+        if (result.getEnchantments().size() == 0) { return; }
         result.getEnchantments().forEach((enchant, level) -> enchant.addToItem(item, level));
         GlowEffects.finalize(item);
         enchantSeeds.put(event.getEnchanter().getUniqueId(), random.nextLong());
         event.getInventory().setItem(0, item);
-        event.setCancelled(true);
 
         if (event.getEnchanter().getGameMode() != GameMode.CREATIVE) {
             int cost = 0;
