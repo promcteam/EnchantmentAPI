@@ -4,22 +4,7 @@ import com.sucy.enchant.api.ItemSet;
 import org.bukkit.enchantments.Enchantment;
 
 import static com.sucy.enchant.api.CustomEnchantment.DEFAULT_GROUP;
-import static com.sucy.enchant.api.ItemSet.ALL;
-import static com.sucy.enchant.api.ItemSet.ARMOR;
-import static com.sucy.enchant.api.ItemSet.AXES;
-import static com.sucy.enchant.api.ItemSet.BOOTS;
-import static com.sucy.enchant.api.ItemSet.BOWS;
-import static com.sucy.enchant.api.ItemSet.CHESTPLATES;
-import static com.sucy.enchant.api.ItemSet.DURABILITY_ALL;
-import static com.sucy.enchant.api.ItemSet.DURABILITY_SECONDARY;
-import static com.sucy.enchant.api.ItemSet.FISHING;
-import static com.sucy.enchant.api.ItemSet.HELMETS;
-import static com.sucy.enchant.api.ItemSet.NONE;
-import static com.sucy.enchant.api.ItemSet.SHEARS;
-import static com.sucy.enchant.api.ItemSet.SWORDS;
-import static com.sucy.enchant.api.ItemSet.TOOLS;
-import static com.sucy.enchant.api.ItemSet.TRIDENT;
-import static com.sucy.enchant.api.ItemSet.WEAPONS;
+import static com.sucy.enchant.api.ItemSet.*;
 
 /**
  * EnchantmentAPI © 2017
@@ -39,6 +24,7 @@ public enum VanillaData {
     PROTECTION_PROJECTILE(ARMOR, NONE, 4, 5, 3, 6, 0, 2, true, "protection"),
     THORNS(CHESTPLATES, ARMOR, 3, 1, -10, 20, 30, 8, true, DEFAULT_GROUP),
     WATER_WORKER(HELMETS, 1, 2, 1, 0, 40, 4, true),
+    SOUL_SPEED(BOOTS, 3, 1, 0, 10, 30, 8, false),
 
     // ---- Swords ---- //
     DAMAGE_ALL(WEAPONS, AXES, 5, 10, 1, 11, 9, 1, true, "damage"),
@@ -59,6 +45,11 @@ public enum VanillaData {
     ARROW_FIRE(BOWS, 1, 2, 20, 0, 50, 4, true),
     ARROW_INFINITE(BOWS, NONE, 1, 1, 20, 0, 50, 8, true, "infinite"),
     ARROW_KNOCKBACK(BOWS, 2, 2, 12, 20, 5, 4, true),
+
+    // ---- Crossbow ---- //
+    MULTISHOT(CROSSBOW, 1, 2, 17, 0, 30, 4, true),
+    QUICK_CHARGE(CROSSBOW, 3, 5, 10, 6, 30, 2, true),
+    PIERCING(CROSSBOW, 4, 10, 1, 20, 30, 1, true),
 
     // ---- Fishing ---- //
     LUCK(FISHING, 3, 2, 15, 9, 41, 4, true),

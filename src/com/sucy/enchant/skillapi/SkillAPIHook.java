@@ -16,7 +16,7 @@ import java.util.List;
 public class SkillAPIHook {
 
     public static List<CustomEnchantment> getEnchantments(final EnchantmentAPI plugin) {
-        if (Bukkit.getPluginManager().isPluginEnabled("SkillAPI")) {
+        if (Bukkit.getPluginManager().isPluginEnabled("ProSkillAPI")) {
             return loadAll(plugin);
         }
         plugin.getLogger().info("SkillAPI not enabled, skipping skill-based enchantments");
