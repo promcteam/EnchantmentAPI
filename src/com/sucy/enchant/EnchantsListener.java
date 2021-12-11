@@ -50,10 +50,15 @@ public class EnchantsListener implements Listener {
         }
         else if (event.getState() == PlayerFishEvent.State.CAUGHT_FISH) {
             final ItemStack caught = ((Item)event.getCaught()).getItemStack();
-            if (caught.getType() == Material.RAW_FISH) {
+            if (caught.getType() == Material.COD) {
                 caught.setAmount(enchants.getOrDefault(Angler.instance, 0) + 1);
                 if (enchants.containsKey(Fried.instance)) {
-                    caught.setType(Material.COOKED_FISH);
+                    caught.setType(Material.COOKED_COD);
+                }
+            } else if (caught.getType() == Material.SALMON) {
+                caught.setAmount(enchants.getOrDefault(Angler.instance, 0) + 1);
+                if (enchants.containsKey(Fried.instance)) {
+                    caught.setType(Material.COOKED_SALMON);
                 }
             }
         }

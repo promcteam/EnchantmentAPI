@@ -1,6 +1,6 @@
 package com.sucy.enchant.trap.enchant;
 
-import com.rit.sucy.player.Protection;
+import mc.promcteam.engine.mccore.util.Protection;
 import com.sucy.enchant.api.Tasks;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -56,13 +56,13 @@ public class WebTrap extends RedstoneTrap {
                 final Block block = loc.getWorld().getBlockAt(temp);
                 if (block.getType() == Material.AIR || !block.getType().isSolid()) {
                     webs.add(block);
-                    block.setType(Material.WEB);
+                    block.setType(Material.COBWEB);
                 }
             }
 
             final int duration = (int)(settings.get(DURATION, level) * 20);
             Tasks.schedule(() -> webs.forEach(web -> {
-                if (web.getType() == Material.WEB) web.setType(Material.AIR);
+                if (web.getType() == Material.COBWEB) web.setType(Material.AIR);
             }), duration);
             return true;
         }

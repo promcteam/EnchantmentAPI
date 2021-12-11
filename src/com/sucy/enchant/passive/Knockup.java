@@ -1,6 +1,6 @@
 package com.sucy.enchant.passive;
 
-import com.rit.sucy.player.Protection;
+import mc.promcteam.engine.mccore.util.Protection;
 import com.sucy.enchant.ConflictGroup;
 import com.sucy.enchant.api.CustomEnchantment;
 import com.sucy.enchant.api.Tasks;

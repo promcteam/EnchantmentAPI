@@ -1,6 +1,6 @@
 package com.sucy.enchant.trap.enchant;
 
-import com.rit.sucy.text.TextFormatter;
+import mc.promcteam.engine.mccore.util.TextFormatter;
 import com.sucy.enchant.ConflictGroup;
 import com.sucy.enchant.api.Cooldowns;
 import com.sucy.enchant.api.CustomEnchantment;

@@ -1,6 +1,6 @@
 package com.sucy.enchant.trap.enchant;
 
-import com.rit.sucy.player.Protection;
+import mc.promcteam.engine.mccore.util.Protection;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;

@@ -3,6 +3,7 @@ package com.sucy.enchant.active;
 import com.sucy.enchant.api.CustomEnchantment;
 import org.bukkit.Material;
 import org.bukkit.entity.Fish;
+import org.bukkit.entity.FishHook;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
@@ -26,7 +27,7 @@ public class Grapple extends CustomEnchantment {
         instance = this;
     }
 
-    public void apply(Player player, Fish hook, int level) {
+    public void apply(Player player, FishHook hook, int level) {
         if (hook.getLocation().subtract(player.getLocation()).length() <= settings.get(RANGE, level)) {
             Vector speed = hook.getLocation().subtract(player.getLocation()).toVector().multiply(settings.get(SPEED, level));
             speed.setY(speed.getY() / 2);
