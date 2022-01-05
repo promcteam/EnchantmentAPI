@@ -19,7 +19,7 @@ public enum VanillaData {
     OXYGEN(HELMETS, 3, 2, 10, 10, 20, 4, true),
     PROTECTION_ENVIRONMENTAL(ARMOR, NONE, 4, 10, 1, 11, 0, 1, true, "protection"),
     PROTECTION_EXPLOSIONS(ARMOR, NONE, 4, 2, 5, 8, 0, 4, true, "protection"),
-    PROTECTION_FALL(BOOTS, NONE, 4, 5, 5, 6, 0, 2, true, "protection"),
+    PROTECTION_FALL(BOOTS, NONE, 4, 5, 5, 6, 0, 2, true, DEFAULT_GROUP),
     PROTECTION_FIRE(ARMOR, NONE, 4, 5, 10, 8, 0, 2, true, "protection"),
     PROTECTION_PROJECTILE(ARMOR, NONE, 4, 5, 3, 6, 0, 2, true, "protection"),
     THORNS(CHESTPLATES, ARMOR, 3, 1, -10, 20, 30, 8, true, DEFAULT_GROUP),

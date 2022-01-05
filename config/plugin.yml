@@ -1,6 +1,6 @@
 name: ProEnchantmentAPI
 main: com.sucy.enchant.EnchantmentAPI
-version: 1.0-ALPHA
+version: ${project.version}
 depend: [ProMCCore]
 softdepend: [ProSkillAPI]
 api-version: 1.17
