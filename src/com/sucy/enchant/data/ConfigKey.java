@@ -11,7 +11,9 @@ public enum ConfigKey {
     GLOBAL_ANVIL_LEVEL,
     MAX_ENCHANTMENTS,
     MAX_MERGED_ENCHANTMENTS,
-    NON_ENCHANTABLES;
+    NON_ENCHANTABLES,
+    SKILL_COOLDOWN,
+    SKILL_MANA;
 
     private final String key = name().toLowerCase().replace('_', '-');
 

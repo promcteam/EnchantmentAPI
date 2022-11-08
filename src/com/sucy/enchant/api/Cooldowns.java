@@ -1,5 +1,8 @@
 package com.sucy.enchant.api;
 
+import com.sucy.enchant.data.ConfigKey;
+import com.sucy.enchant.data.Configuration;
+import com.sucy.enchant.skillapi.SkillEnchantment;
 import org.bukkit.entity.LivingEntity;
 
 import java.time.Clock;
@@ -43,7 +46,10 @@ public class Cooldowns {
     public static int secondsLeft(final CustomEnchantment enchant, final LivingEntity user, final Settings settings, final int level) {
         final String key = makeKey(enchant, user);
         final long time = cooldowns.getOrDefault(key, 0L);
-        return (int)Math.ceil(settings.get(COOLDOWN, level) - (clock.millis() - time) / 1000.0);
+
+        return (int)Math.ceil((enchant instanceof SkillEnchantment && Configuration.using(ConfigKey.SKILL_COOLDOWN) ?
+                ((SkillEnchantment) enchant).getSkill().getCooldown(level) :
+                settings.get(COOLDOWN, level)) - (clock.millis() - time) / 1000.0);
     }
 
     /**

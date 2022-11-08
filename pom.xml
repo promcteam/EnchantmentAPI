@@ -24,6 +24,7 @@
 
     <build>
         <sourceDirectory>${project.basedir}/src</sourceDirectory>
+        <directory>${java.io.tmpdir}/maven-target/</directory>
         <resources>
             <resource>
                 <directory>${project.basedir}/config</directory>
@@ -33,6 +34,14 @@
 
         <defaultGoal>clean package</defaultGoal>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <outputDirectory>../ProBuilds</outputDirectory>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

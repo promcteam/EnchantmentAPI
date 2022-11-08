@@ -28,3 +28,12 @@ custom-fishing: true
 # The enchantment level used to enchant items received
 # while fishing. Requires "custom-fishing" to be enabled.
 fishing-enchanting-level: 30
+#
+# Whether skill enchantments should consume their
+# assigned ProSkillAPI mana, and fail if mana is
+# insufficient
+skill-mana: true
+#
+# Whether to override skill enchantments' cooldown
+# with their corresponding skill's cooldown
+skill-cooldown: true

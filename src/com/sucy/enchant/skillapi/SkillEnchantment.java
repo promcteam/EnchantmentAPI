@@ -1,14 +1,14 @@
 package com.sucy.enchant.skillapi;
 
-import mc.promcteam.engine.mccore.config.parse.DataSection;
 import com.sucy.enchant.api.Cooldowns;
 import com.sucy.enchant.api.CustomEnchantment;
+import com.sucy.enchant.data.ConfigKey;
+import com.sucy.enchant.data.Configuration;
 import com.sucy.skill.SkillAPI;
-import com.sucy.skill.api.skills.PassiveSkill;
-import com.sucy.skill.api.skills.Skill;
-import com.sucy.skill.api.skills.SkillAttribute;
-import com.sucy.skill.api.skills.SkillShot;
-import com.sucy.skill.api.skills.TargetSkill;
+import com.sucy.skill.api.enums.ManaCost;
+import com.sucy.skill.api.player.PlayerData;
+import com.sucy.skill.api.skills.*;
+import mc.promcteam.engine.mccore.config.parse.DataSection;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.Action;
@@ -41,6 +41,8 @@ public class SkillEnchantment extends CustomEnchantment {
                 skill.getSettings().getBase(SkillAttribute.COOLDOWN),
                 skill.getSettings().getScale(SkillAttribute.COOLDOWN));
     }
+
+    public Skill getSkill() { return skill; }
 
     @Override
     public void applyEquip(final LivingEntity user, final int level) {
@@ -75,7 +77,15 @@ public class SkillEnchantment extends CustomEnchantment {
         if (skill instanceof TargetSkill && event.getRightClicked() instanceof LivingEntity) {
             if (!Cooldowns.onCooldown(this, user, settings, level)) {
                 final LivingEntity target = (LivingEntity)event.getRightClicked();
-                if (((TargetSkill) skill).cast(user, target, level, SkillAPI.getSettings().isAlly(user, target))) {
+                if (Configuration.using(ConfigKey.SKILL_MANA) && SkillAPI.getSettings().isManaEnabled()) {
+                    PlayerData playerData = SkillAPI.getPlayerData(user);
+                    double cost = skill.getManaCost(level);
+                    if (playerData.getMana() < cost) { return; }
+                    if (((TargetSkill) skill).cast(user, target, level, SkillAPI.getSettings().isAlly(user, target))) {
+                        playerData.useMana(cost, ManaCost.SKILL_CAST);
+                        Cooldowns.start(this, user);
+                    }
+                } else if (((TargetSkill) skill).cast(user, target, level, SkillAPI.getSettings().isAlly(user, target))) {
                     Cooldowns.start(this, user);
                 }
             }
@@ -84,7 +94,15 @@ public class SkillEnchantment extends CustomEnchantment {
 
     private void applySkillShot(final Player user, final int level) {
         if (skill instanceof SkillShot && !Cooldowns.onCooldown(this, user, settings, level)) {
-            if (((SkillShot) skill).cast(user, level)) {
+            if (Configuration.using(ConfigKey.SKILL_MANA) && SkillAPI.getSettings().isManaEnabled()) {
+                PlayerData playerData = SkillAPI.getPlayerData(user);
+                double cost = skill.getManaCost(level);
+                if (playerData.getMana() < cost) { return; }
+                if (((SkillShot) skill).cast(user, level)) {
+                    playerData.useMana(cost, ManaCost.SKILL_CAST);
+                    Cooldowns.start(this, user);
+                }
+            } else if (((SkillShot) skill).cast(user, level)) {
                 Cooldowns.start(this, user);
             }
         }
