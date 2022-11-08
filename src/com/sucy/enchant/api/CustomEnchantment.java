@@ -7,7 +7,7 @@ import mc.promcteam.engine.mccore.util.TextFormatter;
 import com.sucy.enchant.EnchantmentAPI;
 import com.sucy.enchant.data.Permission;
 import com.sucy.enchant.util.LoreReader;
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
