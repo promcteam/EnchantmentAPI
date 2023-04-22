@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.promcteam</groupId>
         <artifactId>promc-parent</artifactId>
-        <version>1.19.2-SNAPSHOT</version>
+        <version>1.19.4-SNAPSHOT</version>
     </parent>
 
     <artifactId>proenchantmentapi</artifactId>
@@ -74,20 +74,14 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>${spigot.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.promcteam</groupId>
             <artifactId>promccore</artifactId>
-            <version>${promccore.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.promcteam</groupId>
             <artifactId>proskillapi</artifactId>
-            <version>${proskillapi.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

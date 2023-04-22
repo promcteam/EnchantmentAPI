@@ -3,7 +3,7 @@ main: com.sucy.enchant.EnchantmentAPI
 version: ${project.version}
 depend: [ProMCCore]
 softdepend: [ProSkillAPI]
-api-version: 1.17
+api-version: 1.16
 authors: [Eniripsa96, Sentropic]
 
 permissions:
