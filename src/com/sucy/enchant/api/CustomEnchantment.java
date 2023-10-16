@@ -1,12 +1,12 @@
 package com.sucy.enchant.api;
 
 import com.google.common.collect.ImmutableList;
-import mc.promcteam.engine.mccore.config.CommentedConfig;
-import mc.promcteam.engine.mccore.config.parse.DataSection;
-import mc.promcteam.engine.mccore.util.TextFormatter;
 import com.sucy.enchant.EnchantmentAPI;
 import com.sucy.enchant.data.Permission;
 import com.sucy.enchant.util.LoreReader;
+import mc.promcteam.engine.mccore.config.CommentedConfig;
+import mc.promcteam.engine.mccore.config.parse.DataSection;
+import mc.promcteam.engine.mccore.util.TextFormatter;
 import org.apache.commons.lang3.Validate;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -23,14 +23,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.permissions.Permissible;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.sucy.enchant.util.Utils.isPresent;
@@ -163,7 +156,7 @@ public abstract class CustomEnchantment implements Comparable<CustomEnchantment>
     public void setMaxLevel(final int maxLevel) {
         setMaxLevel(maxLevel, maxLevel);
         if (!setFactors) {
-            enchantLevelScaleFactor = 60 / maxLevel;
+            enchantLevelScaleFactor = Math.max(1, 60 / maxLevel);
         }
     }
 
@@ -198,7 +191,7 @@ public abstract class CustomEnchantment implements Comparable<CustomEnchantment>
     public void setEnchantLevelScaleFactor(final double enchantLevelScaleFactor) {
         Validate.isTrue(enchantLevelScaleFactor >= 0, "Scale factor must be a non-negative number");
         setFactors = true;
-        this.enchantLevelScaleFactor = enchantLevelScaleFactor;
+        this.enchantLevelScaleFactor = Math.max(1, enchantLevelScaleFactor);
     }
 
     public double getEnchantLevelBuffer() {

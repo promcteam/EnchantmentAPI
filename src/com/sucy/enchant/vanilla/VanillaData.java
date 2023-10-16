@@ -13,7 +13,7 @@ import static com.sucy.enchant.api.ItemSet.*;
 public enum VanillaData {
 
     // ---- Armor ---- //
-    BINDING_CURSE(ALL, 1, 1, 25, 0, 50, 8, false),
+    BINDING_CURSE(ALL, 1, 1, 25, 25, 50, 8, false),
     DEPTH_STRIDER(BOOTS, NONE, 3, 2, 10, 10, 5, 4, true, "stride"),
     FROST_WALKER(BOOTS, NONE, 2, 2, 10, 10, 5, 4, false, "stride"),
     OXYGEN(HELMETS, 3, 2, 10, 10, 20, 4, true),
@@ -23,7 +23,7 @@ public enum VanillaData {
     PROTECTION_FIRE(ARMOR, NONE, 4, 5, 10, 8, 0, 2, true, "protection"),
     PROTECTION_PROJECTILE(ARMOR, NONE, 4, 5, 3, 6, 0, 2, true, "protection"),
     THORNS(CHESTPLATES, ARMOR, 3, 1, -10, 20, 30, 8, true, DEFAULT_GROUP),
-    WATER_WORKER(HELMETS, 1, 2, 1, 0, 40, 4, true),
+    WATER_WORKER(HELMETS, 1, 2, 1, 25, 40, 4, true),
     SOUL_SPEED(BOOTS, 3, 1, 0, 10, 30, 8, false),
 
     // ---- Swords ---- //
@@ -38,16 +38,16 @@ public enum VanillaData {
     // --- Tools --- //
     DIG_SPEED(TOOLS, SHEARS, 5, 10, 1, 10, 40, 1, true, DEFAULT_GROUP),
     LOOT_BONUS_BLOCKS(TOOLS, NONE, 3, 2, 15, 9, 41, 4, true, "blocks"),
-    SILK_TOUCH(TOOLS, NONE, 1, 1, 15, 0, 50, 8, true, "blocks"),
+    SILK_TOUCH(TOOLS, NONE, 1, 1, 15, 25, 50, 8, true, "blocks"),
 
     // ---- Bows ---- //
     ARROW_DAMAGE(BOWS, 5, 10, 1, 10, 5, 1, true),
-    ARROW_FIRE(BOWS, 1, 2, 20, 0, 50, 4, true),
-    ARROW_INFINITE(BOWS, NONE, 1, 1, 20, 0, 50, 8, true, "infinite"),
+    ARROW_FIRE(BOWS, 1, 2, 20, 25, 50, 4, true),
+    ARROW_INFINITE(BOWS, NONE, 1, 1, 20, 25, 50, 8, true, "infinite"),
     ARROW_KNOCKBACK(BOWS, 2, 2, 12, 20, 5, 4, true),
 
     // ---- Crossbow ---- //
-    MULTISHOT(CROSSBOW, 1, 2, 17, 0, 30, 4, true),
+    MULTISHOT(CROSSBOW, 1, 2, 17, 25, 30, 4, true),
     QUICK_CHARGE(CROSSBOW, 3, 5, 10, 6, 30, 2, true),
     PIERCING(CROSSBOW, 4, 10, 1, 20, 30, 1, true),
 
@@ -59,7 +59,7 @@ public enum VanillaData {
     LOYALTY(TRIDENT, 3, 5, 5, 7, 43, 2, true),
     IMPALING(TRIDENT, 5, 2, 1, 8, 12, 4, true),
     RIPTIDE(TRIDENT, 3, 2, 10, 7, 43, 4, true),
-    CHANNELING(TRIDENT, 1, 1, 25, 0, 50, 8, true),
+    CHANNELING(TRIDENT, 1, 1, 25, 25, 50, 8, true),
 
     // ---- All ---- //
     DURABILITY(ItemSet.DURABILITY, DURABILITY_SECONDARY, 3, 5, 5, 8, 42, 2, true, DEFAULT_GROUP),
