@@ -172,8 +172,8 @@ public abstract class CustomEnchantment implements Comparable<CustomEnchantment>
     }
 
     /**
+     * Note: modified enchantment level is normally between 2 and 48
      * @return minimum modified enchantment level needed to receive this enchantment
-     * @apiNote modified enchantment level is normally between 2 and 48
      */
     public double getMinEnchantingLevel() {
         return minEnchantingLevel;
