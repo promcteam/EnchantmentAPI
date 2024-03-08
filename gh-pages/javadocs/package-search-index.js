@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.sucy.enchant"},{"l":"com.sucy.enchant.api"},{"l":"com.sucy.enchant.cmd"},{"l":"com.sucy.enchant.data"},{"l":"com.sucy.enchant.listener"},{"l":"com.sucy.enchant.mechanics"},{"l":"com.sucy.enchant.skillapi"},{"l":"com.sucy.enchant.util"},{"l":"com.sucy.enchant.vanilla"}];updateSearchResults();
