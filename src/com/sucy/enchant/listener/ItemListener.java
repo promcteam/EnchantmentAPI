@@ -14,16 +14,11 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
-import org.bukkit.event.player.PlayerDropItemEvent;
-import org.bukkit.event.player.PlayerInteractEntityEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerItemBreakEvent;
-import org.bukkit.event.player.PlayerItemHeldEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import static com.sucy.enchant.util.Utils.isPresent;
@@ -34,8 +29,8 @@ import static com.sucy.enchant.util.Utils.isPresent;
  */
 public class ItemListener extends BaseListener {
 
-    private static final HashMap<UUID, Long> LAST_INTERACT_BLOCK  = new HashMap<>();
-    private static final HashMap<UUID, Long> LAST_INTERACT_ENTITY = new HashMap<>();
+    private static final Map<UUID, Long> LAST_INTERACT_BLOCK  = new HashMap<>();
+    private static final Map<UUID, Long> LAST_INTERACT_ENTITY = new HashMap<>();
 
     private static final int INTERACT_DELAY_MILLIS = 250;
 

@@ -55,17 +55,21 @@ public class Enchantments {
      * Clears equipment data for all players, forcing all equipment to refresh
      */
     public static void clearAllEquipmentData() {
-        EQUIPMENT.forEach((id, data) -> data.clear(Bukkit.getPlayer(id)));
+        EQUIPMENT.forEach((id, data) -> {
+            Player player = Bukkit.getPlayer(id);
+            if (player == null) return;
+            data.clear(player);
+        });
         EQUIPMENT.clear();
     }
 
     /**
      * @param item item to grab the enchantments from
-     * @return     list of custom enchantments (does not include vanilla enchantments)
+     * @return list of custom enchantments (does not include vanilla enchantments)
      */
     public static Map<CustomEnchantment, Integer> getCustomEnchantments(final ItemStack item) {
 
-        final HashMap<CustomEnchantment, Integer> list = new HashMap<CustomEnchantment, Integer>();
+        final Map<CustomEnchantment, Integer> list = new HashMap<>();
         if (!isPresent(item)) return list;
 
         final ItemMeta meta = item.getItemMeta();
@@ -76,7 +80,7 @@ public class Enchantments {
             final String name = LoreReader.parseEnchantmentName(line);
             if (EnchantmentAPI.isRegistered(name)) {
                 final CustomEnchantment enchant = EnchantmentAPI.getEnchantment(name);
-                final int level = LoreReader.parseEnchantmentLevel(line);
+                final int               level   = LoreReader.parseEnchantmentLevel(line);
                 if (level > 0) {
                     list.put(enchant, level);
                 }
@@ -114,9 +118,9 @@ public class Enchantments {
     }
 
     /**
-     * Checks whether or not the item has the enchantment on it
+     * Checks whether the item has the enchantment on it
      *
-     * @param item item to check
+     * @param item            item to check
      * @param enchantmentName name of the enchantment to check for
      * @return true if it has the enchantment, false otherwise
      */
