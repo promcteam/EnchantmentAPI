@@ -1,0 +1,55 @@
+package com.promcteam.fabled.enchants.cmd;
+
+import com.promcteam.codex.mccore.commands.ConfigurableCommand;
+import com.promcteam.codex.mccore.commands.IFunction;
+import com.promcteam.fabled.enchants.api.CustomEnchantment;
+import com.promcteam.fabled.enchants.api.Enchantments;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
+
+import java.util.Map;
+
+import static com.promcteam.fabled.enchants.util.Utils.isPresent;
+
+/**
+ * FabledEnchants © 2024 ProMCTeam
+ * cmd.com.promcteam.fabled.enchants.CmdRemove
+ */
+public class CmdRemove implements IFunction {
+
+    private static final String NOT_PLAYER  = "not-player";
+    private static final String NO_ITEM     = "no-item";
+    private static final String NO_ENCHANTS = "no-enchants";
+    private static final String REMOVED     = "removed";
+
+    @Override
+    public void execute(
+            final ConfigurableCommand command,
+            final Plugin plugin,
+            final CommandSender sender,
+            final String[] strings) {
+
+        if (!(sender instanceof Player)) {
+            command.sendMessage(sender, NOT_PLAYER, "&4Only players can use this command");
+            return;
+        }
+
+        final Player    player = (Player) sender;
+        final ItemStack item   = player.getEquipment().getItemInMainHand();
+        if (!isPresent(item)) {
+            command.sendMessage(sender, NO_ITEM, "&4You don't have an item in your hand");
+            return;
+        }
+
+        final Map<CustomEnchantment, Integer> enchantments = Enchantments.getAllEnchantments(item);
+        if (enchantments.isEmpty()) {
+            command.sendMessage(sender, NO_ENCHANTS, "&4That item doesn't have any enchantments");
+            return;
+        }
+
+        Enchantments.removeAllEnchantments(item);
+        command.sendMessage(sender, REMOVED, "&2 Removed all enchantments from your held item");
+    }
+}

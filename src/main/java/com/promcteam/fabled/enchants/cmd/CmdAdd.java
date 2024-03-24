@@ -1,0 +1,83 @@
+package com.promcteam.fabled.enchants.cmd;
+
+import com.promcteam.codex.mccore.commands.CommandManager;
+import com.promcteam.codex.mccore.commands.ConfigurableCommand;
+import com.promcteam.codex.mccore.commands.IFunction;
+import com.promcteam.fabled.enchants.FabledEnchants;
+import com.promcteam.fabled.enchants.api.CustomEnchantment;
+import com.promcteam.fabled.enchants.api.Enchantments;
+import com.promcteam.fabled.enchants.api.GlowEffects;
+import com.promcteam.fabled.enchants.api.Tasks;
+import com.promcteam.fabled.enchants.data.PlayerEquips;
+import org.bukkit.ChatColor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
+
+import static com.promcteam.fabled.enchants.util.Utils.isPresent;
+
+/**
+ * FabledEnchants © 2024 ProMCTeam
+ * cmd.com.promcteam.fabled.enchants.CmdAdd
+ */
+public class CmdAdd implements IFunction {
+
+    private static final String PLAYER_ONLY     = "player-only";
+    private static final String NOT_ENCHANTMENT = "not-enchantment";
+    private static final String NOT_LEVEL       = "not-level";
+    private static final String NO_ITEM         = "no-item";
+    private static final String SUCCESS         = "success";
+
+    @Override
+    public void execute(
+            final ConfigurableCommand command,
+            final Plugin plugin,
+            final CommandSender sender,
+            final String[] args) {
+
+        if (!(sender instanceof Player)) {
+            command.sendMessage(sender, PLAYER_ONLY, ChatColor.DARK_RED + "Only players can use this command");
+            return;
+        }
+
+        if (args.length < 2) {
+            CommandManager.displayUsage(command, sender);
+            return;
+        }
+
+        final Player player = (Player) sender;
+        if (!isPresent(player.getEquipment().getItemInMainHand())) {
+            command.sendMessage(sender, NO_ITEM, ChatColor.DARK_RED + "You are not holding an item to enchants");
+        }
+
+        final StringBuilder builder = new StringBuilder(args[0]);
+        for (int i = 1; i < args.length - 1; i++) {
+            builder.append(' ');
+            builder.append(args[i]);
+        }
+
+        final CustomEnchantment enchantment = FabledEnchants.getEnchantment(builder.toString());
+        if (enchantment == null) {
+            command.sendMessage(sender,
+                    NOT_ENCHANTMENT,
+                    ChatColor.GOLD + builder.toString() + ChatColor.DARK_RED + " is not an enchantment");
+            return;
+        }
+
+        final int level;
+        try {
+            level = Integer.parseInt(args[args.length - 1]);
+        } catch (final Exception ex) {
+            command.sendMessage(sender,
+                    NOT_LEVEL,
+                    ChatColor.GOLD + args[args.length - 1] + ChatColor.DARK_RED + " is not a number");
+            return;
+        }
+
+        enchantment.addToItem(player.getInventory().getItemInMainHand(), level);
+        GlowEffects.finalize(player.getInventory().getItemInMainHand());
+        final PlayerEquips equips = Enchantments.getEquipmentData(player);
+        Tasks.schedule(() -> equips.updateWeapon((player).getInventory()));
+        command.sendMessage(sender, SUCCESS, ChatColor.DARK_GREEN + "Added the enchantment successfully");
+    }
+}
