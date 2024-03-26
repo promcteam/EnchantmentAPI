@@ -1,12 +1,12 @@
 package com.promcteam.fabled.enchants.api;
 
 import com.google.common.collect.ImmutableList;
-import com.promcteam.fabled.enchants.FabledEnchants;
-import com.promcteam.fabled.enchants.data.Permission;
-import com.promcteam.fabled.enchants.util.LoreReader;
 import com.promcteam.codex.mccore.config.CommentedConfig;
 import com.promcteam.codex.mccore.config.parse.DataSection;
 import com.promcteam.codex.mccore.util.TextFormatter;
+import com.promcteam.fabled.enchants.FabledEnchants;
+import com.promcteam.fabled.enchants.data.Permission;
+import com.promcteam.fabled.enchants.util.LoreReader;
 import org.apache.commons.lang3.Validate;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -269,9 +269,9 @@ public abstract class CustomEnchantment implements Comparable<CustomEnchantment>
      * @return enchantment level
      */
     public int computeLevel(final int expLevel) {
-        final int    level = Math.min(1 + (int) Math.floor((expLevel - minEnchantingLevel) / enchantLevelScaleFactor),
+        final int level = Math.min(1 + (int) Math.floor((expLevel - minEnchantingLevel) / enchantLevelScaleFactor),
                 this.maxTableLevel);
-        final double cap   = minEnchantingLevel + level * enchantLevelScaleFactor + enchantLevelBuffer;
+        final double cap = minEnchantingLevel + level * enchantLevelScaleFactor + enchantLevelBuffer;
         return expLevel <= cap ? Math.max(0, level) : 0;
     }
 

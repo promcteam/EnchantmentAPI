@@ -118,9 +118,9 @@ public class PlayerEquips {
     public static final Set<Material> ARMOR_TYPES = getArmorMaterials();
 
     private static Set<Material> getArmorMaterials() {
-        final Set<String>                    armorSuffixes =
+        final Set<String> armorSuffixes =
                 ImmutableSet.of("BOOTS", "LEGGINGS", "CHESTPLATE", "HELMET");
-        final ImmutableSet.Builder<Material> builder       = ImmutableSet.builder();
+        final ImmutableSet.Builder<Material> builder = ImmutableSet.builder();
         for (Material material : Material.values()) {
             final int    index  = material.name().lastIndexOf('_') + 1;
             final String suffix = material.name().substring(index);

@@ -1,14 +1,14 @@
 package com.promcteam.fabled.enchants.fabled;
 
-import com.promcteam.fabled.enchants.api.Cooldowns;
-import com.promcteam.fabled.enchants.api.CustomEnchantment;
-import com.promcteam.fabled.enchants.data.ConfigKey;
-import com.promcteam.fabled.enchants.data.Configuration;
+import com.promcteam.codex.mccore.config.parse.DataSection;
 import com.promcteam.fabled.Fabled;
 import com.promcteam.fabled.api.enums.ManaCost;
 import com.promcteam.fabled.api.player.PlayerData;
 import com.promcteam.fabled.api.skills.*;
-import com.promcteam.codex.mccore.config.parse.DataSection;
+import com.promcteam.fabled.enchants.api.Cooldowns;
+import com.promcteam.fabled.enchants.api.CustomEnchantment;
+import com.promcteam.fabled.enchants.data.ConfigKey;
+import com.promcteam.fabled.enchants.data.Configuration;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.Action;

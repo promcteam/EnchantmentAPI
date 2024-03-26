@@ -1,7 +1,7 @@
 package com.promcteam.fabled.enchants.vanilla;
 
-import com.promcteam.fabled.enchants.api.ItemSet;
 import com.promcteam.fabled.enchants.api.CustomEnchantment;
+import com.promcteam.fabled.enchants.api.ItemSet;
 import org.bukkit.enchantments.Enchantment;
 
 /**
