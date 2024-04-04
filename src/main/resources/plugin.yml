@@ -1,5 +1,5 @@
 name: ${project.name}
-main: com.promcteam.fabled.enchants.FabledEnchants
+main: studio.magemonkey.fabled.enchants.FabledEnchants
 version: ${project.version}
 depend: [ Codex ]
 softdepend: [ Fabled ]
