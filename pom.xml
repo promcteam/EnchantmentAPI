@@ -5,18 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.promcteam</groupId>
-        <artifactId>promc-parent</artifactId>
+        <groupId>studio.magemonkey</groupId>
+        <artifactId>magemonkey-parent</artifactId>
         <version>1.20.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>proenchantmentapi</artifactId>
-    <version>1.0.0-R0.2-SNAPSHOT</version>
+    <artifactId>fabled-enchants</artifactId>
+    <version>1.0.0-R0.1-SNAPSHOT</version>
+    <name>FabledEnchants</name>
     <packaging>jar</packaging>
+    <description>FabledEnchants brings customization to enchantments. Change how common enchantments are, turn specific
+        ones off, change the max levels, or create your own!
+    </description>
 
-    <name>ProEnchantmentAPI</name>
-
-    <description>EnchantmentAPI brings customization to enchantments. Change how common enchantments are, turn specific ones off, change the max levels, or create your own!</description>
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,45 +31,29 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
+            <groupId>studio.magemonkey</groupId>
+            <artifactId>codex</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.promcteam</groupId>
-            <artifactId>promccore</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.promcteam</groupId>
-            <artifactId>proskillapi</artifactId>
+            <groupId>studio.magemonkey</groupId>
+            <artifactId>fabled</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
     <build>
-        <sourceDirectory>${project.basedir}/src</sourceDirectory>
-        <directory>${java.io.tmpdir}/maven-target/</directory>
         <resources>
             <resource>
-                <directory>${project.basedir}/config</directory>
+                <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
 
         <defaultGoal>clean package</defaultGoal>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
-                <configuration>
-                    <outputDirectory>../ProBuilds</outputDirectory>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

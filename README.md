@@ -1,9 +1,9 @@
-[![Build](https://github.com/promcteam/proenchantmentapi/actions/workflows/release.yml/badge.svg?branch=main)](https://s01.oss.sonatype.org/content/repositories/releases/com/promcteam/proenchantmentapi/1.0.0-R0.1-SNAPSHOT)
-[![Build](https://github.com/promcteam/proenchantmentapi/actions/workflows/devbuild.yml/badge.svg?branch=dev)](https://s01.oss.sonatype.org/content/repositories/snapshots/com/promcteam/proenchantmentapi/1.0.0-R0.1-SNAPSHOT)
+[![Build](https://github.com/promcteam/fabled-enchants/actions/workflows/release.yml/badge.svg?branch=main)](https://s01.oss.sonatype.org/content/repositories/releases/studio/magemonkey/fabled-enchants/1.0.0-R0.1-SNAPSHOT)
+[![Build](https://github.com/promcteam/fabled-enchants/actions/workflows/devbuild.yml/badge.svg?branch=dev)](https://s01.oss.sonatype.org/content/repositories/snapshots/studio/magemonkey/fabled-enchants/1.0.0-R0.1-SNAPSHOT)
 
-# ProEnchantmentAPI
+# FabledEnchants
 
-If you wish to use ProEnchantmentAPI as a dependency in your projects, ProEnchantmentAPI is available through Maven Central
+If you wish to use FabledEnchants as a dependency in your projects, FabledEnchants is available through Maven Central
 or snapshots through Sonatype.
 
 ```xml
@@ -13,13 +13,14 @@ or snapshots through Sonatype.
 </repository>
 ...
 <dependency>
-    <groupId>com.promcteam</groupId>
-    <artifactId>proenchantmentapi</artifactId>
+    <groupId>studio.magemonkey</groupId>
+    <artifactId>fabled-enchants</artifactId>
     <version>1.0.0-R0.1-SNAPSHOT</version>
 </dependency>
 ```
 
 ### A huge thanks to our contributors
-<a href="https://github.com/promcteam/proenchantmentapi/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=promcteam/proenchantmentapi" />
+
+<a href="https://github.com/promcteam/fabled-enchants/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=promcteam/fabled-enchants" />
 </a>
