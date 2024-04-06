@@ -1,5 +1,9 @@
 package studio.magemonkey.fabled.enchants;
 
+import org.bukkit.Bukkit;
+import org.bukkit.event.HandlerList;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.java.JavaPlugin;
 import studio.magemonkey.codex.mccore.commands.CommandManager;
 import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
 import studio.magemonkey.fabled.enchants.api.EnchantPlugin;
@@ -12,10 +16,6 @@ import studio.magemonkey.fabled.enchants.data.Enchantability;
 import studio.magemonkey.fabled.enchants.fabled.FabledHook;
 import studio.magemonkey.fabled.enchants.listener.*;
 import studio.magemonkey.fabled.enchants.vanilla.VanillaData;
-import org.bukkit.Bukkit;
-import org.bukkit.event.HandlerList;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.*;
 
@@ -125,7 +125,7 @@ public class FabledEnchants extends JavaPlugin implements EnchantmentRegistry {
                     ((EnchantPlugin) plugin).registerEnchantments(this);
                 } catch (final Exception ex) {
                     getLogger().warning(
-                            plugin.getName() + " failed to register enchantments. Send the error to the author.");
+                            plugin.getName() + " failed to register enchantments. Send the error to the author");
                     ex.printStackTrace();
                 }
             }
