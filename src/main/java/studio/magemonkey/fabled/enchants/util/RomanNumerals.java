@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * util.studio.magemonkey.fabled.enchants.RomanNumerals
  */
 public class RomanNumerals {

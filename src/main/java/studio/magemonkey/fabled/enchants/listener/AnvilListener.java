@@ -19,7 +19,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import static studio.magemonkey.fabled.enchants.util.Utils.isPresent;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * listener.studio.magemonkey.fabled.enchants.AnvilListener
  */
 public class AnvilListener extends BaseListener {

@@ -16,7 +16,7 @@ import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * fabled.studio.magemonkey.fabled.enchants.SkillEnchantment
  */
 public class SkillEnchantment extends CustomEnchantment {

@@ -7,7 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * api.studio.magemonkey.fabled.enchants.GlowEffects
  */
 public class GlowEffects {

@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * vanilla.studio.magemonkey.fabled.enchants.Vanilla
  */
 public class Vanilla {

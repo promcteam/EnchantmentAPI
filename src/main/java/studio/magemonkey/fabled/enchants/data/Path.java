@@ -1,7 +1,7 @@
 package studio.magemonkey.fabled.enchants.data;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * data.studio.magemonkey.fabled.enchants.Path
  */
 public class Path {

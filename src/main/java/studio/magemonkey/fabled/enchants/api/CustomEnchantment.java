@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 import static studio.magemonkey.fabled.enchants.util.Utils.isPresent;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * api.studio.magemonkey.fabled.enchants.CustomEnchantment
  */
 public abstract class CustomEnchantment implements Comparable<CustomEnchantment> {

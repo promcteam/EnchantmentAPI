@@ -1,7 +1,7 @@
 package studio.magemonkey.fabled.enchants.api;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * api.studio.magemonkey.fabled.enchants.EnchantmentRegistry
  */
 public interface EnchantmentRegistry {

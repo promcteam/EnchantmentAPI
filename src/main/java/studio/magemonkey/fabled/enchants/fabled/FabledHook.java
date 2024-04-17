@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.List;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * fabled.studio.magemonkey.fabled.enchants.FabledHook
  */
 public class FabledHook {

@@ -5,7 +5,7 @@ import org.bukkit.Material;
 import java.util.Arrays;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * api.studio.magemonkey.fabled.enchants.ItemSet
  */
 public enum ItemSet {

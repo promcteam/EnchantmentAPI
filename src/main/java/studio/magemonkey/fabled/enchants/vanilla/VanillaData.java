@@ -5,7 +5,7 @@ import studio.magemonkey.fabled.enchants.api.ItemSet;
 import org.bukkit.enchantments.Enchantment;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * vanilla.studio.magemonkey.fabled.enchants.VanillaData
  */
 public enum VanillaData {

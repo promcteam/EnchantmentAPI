@@ -38,7 +38,7 @@ import java.util.*;
 import static studio.magemonkey.fabled.enchants.util.Utils.isPresent;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * listener.studio.magemonkey.fabled.enchants.EnchantListener
  */
 public class EnchantListener extends BaseListener {

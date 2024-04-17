@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * cmd.studio.magemonkey.fabled.enchants.CmdGraph
  */
 public class CmdGraph implements IFunction {

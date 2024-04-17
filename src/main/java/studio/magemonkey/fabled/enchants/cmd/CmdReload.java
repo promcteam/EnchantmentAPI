@@ -9,7 +9,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * cmd.studio.magemonkey.fabled.enchants.CmdReload
  */
 public class CmdReload implements IFunction {

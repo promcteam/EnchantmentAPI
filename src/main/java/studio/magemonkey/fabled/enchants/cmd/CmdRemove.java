@@ -14,7 +14,7 @@ import java.util.Map;
 import static studio.magemonkey.fabled.enchants.util.Utils.isPresent;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * cmd.studio.magemonkey.fabled.enchants.CmdRemove
  */
 public class CmdRemove implements IFunction {

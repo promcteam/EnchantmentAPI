@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.Random;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * listener.studio.magemonkey.fabled.enchants.FishingListener
  */
 public class FishingListener extends BaseListener {

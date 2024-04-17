@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * cmd.studio.magemonkey.fabled.enchants.CmdBook
  */
 public class CmdBook implements IFunction {
@@ -40,8 +40,8 @@ public class CmdBook implements IFunction {
 
         final ItemStack book = new ItemStack(ItemSet.BOOK_AND_QUILL.getItems()[0]);
         final BookMeta  meta = (BookMeta) book.getItemMeta();
-        meta.addPage("FabledEnchants\nBy Mage Monkey Studios\n\n Enchantment details");
-        meta.setAuthor("Mage Monkey Studios");
+        meta.addPage("FabledEnchants\nBy MageMonkeyStudio\n\n Enchantment details");
+        meta.setAuthor("MageMonkeyStudio");
         meta.setTitle("FabledEnchants");
 
         final ArrayList<CustomEnchantment> enchants = new ArrayList<>(FabledEnchants.getRegisteredEnchantments());

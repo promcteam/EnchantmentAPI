@@ -11,7 +11,7 @@ import org.bukkit.permissions.Permissible;
 import java.util.Map;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * vanilla.studio.magemonkey.fabled.enchants.VanillaEnchantment
  */
 public class VanillaEnchantment extends CustomEnchantment {

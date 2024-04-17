@@ -7,7 +7,7 @@ import org.bukkit.scheduler.BukkitTask;
 import java.util.Objects;
 
 /**
- * FabledEnchants © 2024 Mage Monkey Studios
+ * FabledEnchants © 2024 MageMonkeyStudio
  * api.studio.magemonkey.fabled.enchants.Tasks
  * <p>
  * Utility class providing ways to register tasks through FabledEnchants
