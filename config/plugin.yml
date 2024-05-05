@@ -1,5 +1,5 @@
-name: ProEnchantmentPack
-main: com.sucy.enchant.EnchantmentPack
-version: 1.0-ALPHA
+name: FabledEnchantmentPack
+main: studio.magemonkey.enchant.EnchantmentPack
+version: 1.0.0-R1
 api-version: 1.17
-depend: [ProEnchantmentAPI]
+depend: [FabledEnchants]

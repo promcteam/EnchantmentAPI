@@ -4,18 +4,61 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sucy.enchant</groupId>
-    <artifactId>ProEnchantmentPack</artifactId>
-    <version>1.0-ALPHA</version>
+    <groupId>studio.magemonkey</groupId>
+    <artifactId>fabled-enchantment-pack</artifactId>
+    <version>1.0.0-R1</version>
     <packaging>jar</packaging>
 
-    <name>ProEnchantmentPack</name>
+    <name>FabledEnchantmentPack</name>
 
     <description>EnchantmentPack is an add-on that provides 50 enchantments to get you started. The enchantments can be seen below.</description>
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>sonatype</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+
+        <repository>
+            <id>spigotmc-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.20.6-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>studio.magemonkey</groupId>
+            <artifactId>codex</artifactId>
+            <version>1.0.0-R0.7-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>studio.magemonkey</groupId>
+            <artifactId>fabled-enchants</artifactId>
+            <version>1.0.0-R0.2-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>studio.magemonkey</groupId>
+            <artifactId>fabled</artifactId>
+            <version>1.0.0-R0.18-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <sourceDirectory>${project.basedir}/src</sourceDirectory>
@@ -35,6 +78,7 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
                 </configuration>
             </plugin>
             <plugin>
@@ -53,49 +97,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
-                </configuration>
-            </plugin>
-
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>spigotmc-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-    <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.17.1-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.promcteam</groupId>
-            <artifactId>promccore</artifactId>
-            <version>dev-e201726cc4-1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.promcteam</groupId>
-            <artifactId>proenchantmentapi</artifactId>
-            <version>1de87ec1ae</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.promcteam</groupId>
-            <artifactId>proskillapi</artifactId>
-            <version>1.1.7.0.3</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 </project>
