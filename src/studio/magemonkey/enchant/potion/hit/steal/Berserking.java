@@ -11,6 +11,8 @@ public class Berserking extends PotionSteal {
     }
 
     public PotionEffectType type() {
-        return PotionEffectType.STRENGTH;
+        return PotionEffectType.getByName("INCREASE_DAMAGE") != null
+                ? PotionEffectType.getByName("INCREASE_DAMAGE")
+                : PotionEffectType.getByName("STRENGTH");
     }
 }

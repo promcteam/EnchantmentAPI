@@ -17,6 +17,8 @@ public class Adrenaline extends PotionAbsorb {
      * @return potion type applied by this enchantment
      */
     public PotionEffectType type() {
-        return PotionEffectType.STRENGTH;
+        return PotionEffectType.getByName("INCREASE_DAMAGE") != null
+                ? PotionEffectType.getByName("INCREASE_DAMAGE")
+                : PotionEffectType.getByName("STRENGTH");
     }
 }

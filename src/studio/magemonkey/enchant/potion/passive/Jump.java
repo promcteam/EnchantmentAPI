@@ -17,6 +17,8 @@ public class Jump extends PotionPassive {
      * @return potion type applied by this enchantment
      */
     public PotionEffectType type() {
-        return PotionEffectType.JUMP_BOOST;
+        return PotionEffectType.getByName("JUMP") != null
+                ? PotionEffectType.getByName("JUMP")
+                : PotionEffectType.getByName("JUMP_BOOST");
     }
 }

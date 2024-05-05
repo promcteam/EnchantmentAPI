@@ -17,6 +17,8 @@ public class Slow extends PotionInflict {
      * @return type of potion applied by this enchantment
      */
     public PotionEffectType type() {
-        return PotionEffectType.SLOWNESS;
+        return PotionEffectType.getByName("SLOW") != null
+                ? PotionEffectType.getByName("SLOW")
+                : PotionEffectType.getByName("SLOWNESS");
     }
 }
