@@ -1,5 +1,6 @@
 package studio.magemonkey.fabled.enchants.fabled;
 
+import lombok.Getter;
 import studio.magemonkey.codex.mccore.config.parse.DataSection;
 import studio.magemonkey.fabled.Fabled;
 import studio.magemonkey.fabled.api.enums.ManaCost;
@@ -19,8 +20,8 @@ import org.bukkit.event.player.PlayerInteractEvent;
  * FabledEnchants © 2024 MageMonkeyStudio
  * fabled.studio.magemonkey.fabled.enchants.SkillEnchantment
  */
+@Getter
 public class SkillEnchantment extends CustomEnchantment {
-
     private static final String SKILL  = "skill";
     private static final String EFFECT = "effect.";
     private static final String CLICK  = "right-click";
@@ -42,8 +43,6 @@ public class SkillEnchantment extends CustomEnchantment {
                 skill.getSettings().getScale(SkillAttribute.COOLDOWN));
     }
 
-    public Skill getSkill() {return skill;}
-
     @Override
     public void applyEquip(final LivingEntity user, final int level) {
         if (skill instanceof PassiveSkill) {
@@ -61,7 +60,6 @@ public class SkillEnchantment extends CustomEnchantment {
     @Override
     public void applyInteractBlock(
             final Player user, final int level, final PlayerInteractEvent event) {
-
         if (event.getAction() == Action.PHYSICAL) return;
         final boolean isRightClick = event.getAction() == Action.RIGHT_CLICK_AIR
                 || event.getAction() == Action.RIGHT_CLICK_BLOCK;
