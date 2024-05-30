@@ -1,11 +1,10 @@
 package studio.magemonkey.fabled.enchants.data;
 
 import com.google.common.collect.ImmutableList;
+import org.bukkit.Material;
 import studio.magemonkey.codex.mccore.config.CommentedConfig;
 import studio.magemonkey.codex.mccore.config.parse.DataSection;
-import studio.magemonkey.codex.mccore.util.VersionManager;
 import studio.magemonkey.fabled.enchants.FabledEnchants;
-import org.bukkit.Material;
 
 import java.util.HashMap;
 import java.util.List;
@@ -102,15 +101,15 @@ public class Enchantability {
             .add("AXE")
             .add("HOE")
             .add("PICKAXE")
-            .add(VersionManager.isVersionAtLeast(11300) ? "SHOVEL" : "SPADE")
+            .add("SHOVEL")
             .add("SWORD")
             .build();
 
     private enum MaterialClass {
-        WOOD(0, 15, VersionManager.isVersionAtLeast(11300) ? "WOODEN" : "WOOD"),
+        WOOD(0, 15, "WOODEN"),
         STONE(0, 5),
         IRON(9, 14),
-        GOLD(25, 22, VersionManager.isVersionAtLeast(11300) ? "GOLDEN" : "GOLD"),
+        GOLD(25, 22, "GOLDEN"),
         DIAMOND(10, 10),
         LEATHER(15, 0),
         CHAINMAIL(12, 0);
