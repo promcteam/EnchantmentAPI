@@ -1,6 +1,7 @@
 package studio.magemonkey.fabled.enchants.api;
 
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -49,9 +50,11 @@ public class GlowEffects {
         if (item.getType() == Material.ENCHANTED_BOOK) {
             return Enchantment.BINDING_CURSE;
         } else if (item.getType() == Material.BOW) {
-            return Enchantment.getByName("fortune"); // LUCK/FORTUNE
+            Enchantment ench = Enchantment.getByKey(NamespacedKey.minecraft("fortune")); // LUCK/FORTUNE
+            if (ench == null) ench = Enchantment.getByKey(NamespacedKey.minecraft("luck"));
+            return ench;
         } else {
-            return Enchantment.getByName("infinity"); // ARROW_INFINITE/INFINITY
+            return Enchantment.getByKey(NamespacedKey.minecraft("infinity")); // ARROW_INFINITE/INFINITY
         }
     }
 }
