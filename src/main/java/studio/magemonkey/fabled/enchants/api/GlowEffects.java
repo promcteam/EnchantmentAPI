@@ -49,9 +49,9 @@ public class GlowEffects {
         if (item.getType() == Material.ENCHANTED_BOOK) {
             return Enchantment.BINDING_CURSE;
         } else if (item.getType() == Material.BOW) {
-            return Enchantment.LUCK;
+            return Enchantment.getByName("fortune"); // LUCK/FORTUNE
         } else {
-            return Enchantment.ARROW_INFINITE;
+            return Enchantment.getByName("infinity"); // ARROW_INFINITE/INFINITY
         }
     }
 }
