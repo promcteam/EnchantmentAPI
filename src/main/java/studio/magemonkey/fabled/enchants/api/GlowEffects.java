@@ -6,6 +6,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import studio.magemonkey.codex.util.NamespaceResolver;
 
 /**
  * FabledEnchants © 2024 MageMonkeyStudio
@@ -50,11 +51,9 @@ public class GlowEffects {
         if (item.getType() == Material.ENCHANTED_BOOK) {
             return Enchantment.BINDING_CURSE;
         } else if (item.getType() == Material.BOW) {
-            Enchantment ench = Enchantment.getByKey(NamespacedKey.minecraft("fortune")); // LUCK/FORTUNE
-            if (ench == null) ench = Enchantment.getByKey(NamespacedKey.minecraft("luck"));
-            return ench;
+            return NamespaceResolver.getEnchantment("FORTUNE", "LUCK"); // FORTUNE/LUCK
         } else {
-            return Enchantment.getByKey(NamespacedKey.minecraft("infinity")); // ARROW_INFINITE/INFINITY
+            return NamespaceResolver.getEnchantment("INFINITY", "ARROW_INFINITE"); // INFINITY/ARROW_INFINITE
         }
     }
 }
