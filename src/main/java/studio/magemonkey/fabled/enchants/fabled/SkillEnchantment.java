@@ -76,7 +76,7 @@ public class SkillEnchantment extends CustomEnchantment {
             if (!Cooldowns.onCooldown(this, user, settings, level)) {
                 final LivingEntity target = (LivingEntity) event.getRightClicked();
                 if (Configuration.using(ConfigKey.SKILL_MANA) && Fabled.getSettings().isManaEnabled()) {
-                    PlayerData playerData = Fabled.getPlayerData(user);
+                    PlayerData playerData = Fabled.getData(user);
                     double     cost       = skill.getManaCost(level);
                     if (playerData.getMana() < cost) {
                         return;
@@ -95,7 +95,7 @@ public class SkillEnchantment extends CustomEnchantment {
     private void applySkillShot(final Player user, final int level) {
         if (skill instanceof SkillShot && !Cooldowns.onCooldown(this, user, settings, level)) {
             if (Configuration.using(ConfigKey.SKILL_MANA) && Fabled.getSettings().isManaEnabled()) {
-                PlayerData playerData = Fabled.getPlayerData(user);
+                PlayerData playerData = Fabled.getData(user);
                 double     cost       = skill.getManaCost(level);
                 if (playerData.getMana() < cost) {
                     return;
