@@ -43,7 +43,7 @@
         <dependency>
             <groupId>studio.magemonkey</groupId>
             <artifactId>codex</artifactId>
-            <version>1.0.0-R0.7-SNAPSHOT</version>
+            <version>1.0.0-R0.17-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -55,7 +55,7 @@
         <dependency>
             <groupId>studio.magemonkey</groupId>
             <artifactId>fabled</artifactId>
-            <version>1.0.0-R0.18-SNAPSHOT</version>
+            <version>1.0.0-R0.32-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
