@@ -36,7 +36,11 @@ public class SkillEnchantment extends CustomEnchantment {
         settings.set(CLICK, true);
 
         skill = Fabled.getSkill(skillName);
-        if (skill == null) System.out.println(data.getString(SKILL) + " is not a skill");
+        if (skill == null) {
+            System.out.println(data.getString(SKILL) + " is not a skill");
+            return;
+        }
+
         setMaxLevel(skill.getMaxLevel());
         Cooldowns.configure(settings,
                 skill.getSettings().getBase(SkillAttribute.COOLDOWN),
