@@ -3,6 +3,10 @@ out/
 *.iml
 modules/
 /target/
+log.txt
+settings.xml
+toolchains.xml
+gh-pages/
 
 #################
 ## Eclipse
