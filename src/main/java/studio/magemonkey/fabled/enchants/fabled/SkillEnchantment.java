@@ -57,7 +57,7 @@ public class SkillEnchantment extends CustomEnchantment {
     @Override
     public void applyUnequip(final LivingEntity user, final int level) {
         if (skill instanceof PassiveSkill) {
-            ((PassiveSkill) skill).stopEffects(user, level);
+            ((PassiveSkill) skill).stopEffects(user);
         }
     }
 
