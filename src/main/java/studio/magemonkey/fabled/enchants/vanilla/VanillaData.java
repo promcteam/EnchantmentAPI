@@ -1,8 +1,8 @@
 package studio.magemonkey.fabled.enchants.vanilla;
 
+import org.bukkit.enchantments.Enchantment;
 import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
 import studio.magemonkey.fabled.enchants.api.ItemSet;
-import org.bukkit.enchantments.Enchantment;
 
 /**
  * FabledEnchants © 2024 MageMonkeyStudio

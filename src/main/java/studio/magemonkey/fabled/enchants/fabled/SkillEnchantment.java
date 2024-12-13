@@ -1,6 +1,11 @@
 package studio.magemonkey.fabled.enchants.fabled;
 
 import lombok.Getter;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import studio.magemonkey.codex.mccore.config.parse.DataSection;
 import studio.magemonkey.fabled.Fabled;
 import studio.magemonkey.fabled.api.enums.ManaCost;
@@ -10,11 +15,6 @@ import studio.magemonkey.fabled.enchants.api.Cooldowns;
 import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
 import studio.magemonkey.fabled.enchants.data.ConfigKey;
 import studio.magemonkey.fabled.enchants.data.Configuration;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEntityEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
  * FabledEnchants © 2024 MageMonkeyStudio

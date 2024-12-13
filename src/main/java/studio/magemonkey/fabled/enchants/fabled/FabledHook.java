@@ -1,10 +1,10 @@
 package studio.magemonkey.fabled.enchants.fabled;
 
 import com.google.common.collect.ImmutableList;
+import org.bukkit.Bukkit;
 import studio.magemonkey.codex.mccore.config.CommentedConfig;
 import studio.magemonkey.fabled.enchants.FabledEnchants;
 import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
-import org.bukkit.Bukkit;
 
 import java.io.File;
 import java.util.List;

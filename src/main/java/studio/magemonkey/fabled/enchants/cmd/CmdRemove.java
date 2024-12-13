@@ -1,13 +1,13 @@
 package studio.magemonkey.fabled.enchants.cmd;
 
-import studio.magemonkey.codex.mccore.commands.ConfigurableCommand;
-import studio.magemonkey.codex.mccore.commands.IFunction;
-import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
-import studio.magemonkey.fabled.enchants.api.Enchantments;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
+import studio.magemonkey.codex.mccore.commands.ConfigurableCommand;
+import studio.magemonkey.codex.mccore.commands.IFunction;
+import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
+import studio.magemonkey.fabled.enchants.api.Enchantments;
 
 import java.util.Map;
 

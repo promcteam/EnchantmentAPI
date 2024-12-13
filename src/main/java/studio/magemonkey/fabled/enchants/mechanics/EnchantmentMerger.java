@@ -1,13 +1,13 @@
 package studio.magemonkey.fabled.enchants.mechanics;
 
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
 import studio.magemonkey.fabled.enchants.api.Enchantments;
 import studio.magemonkey.fabled.enchants.api.GlowEffects;
 import studio.magemonkey.fabled.enchants.data.ConfigKey;
 import studio.magemonkey.fabled.enchants.data.Configuration;
 import studio.magemonkey.fabled.enchants.vanilla.VanillaEnchantment;
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;

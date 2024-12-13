@@ -1,8 +1,8 @@
 package studio.magemonkey.fabled.enchants.util;
 
+import org.bukkit.ChatColor;
 import studio.magemonkey.fabled.enchants.FabledEnchants;
 import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
-import org.bukkit.ChatColor;
 
 import java.util.Objects;
 

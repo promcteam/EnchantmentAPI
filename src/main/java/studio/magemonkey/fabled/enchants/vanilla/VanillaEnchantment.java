@@ -1,12 +1,12 @@
 package studio.magemonkey.fabled.enchants.vanilla;
 
-import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
-import studio.magemonkey.fabled.enchants.data.Permission;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.EnchantmentStorageMeta;
 import org.bukkit.permissions.Permissible;
+import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
+import studio.magemonkey.fabled.enchants.data.Permission;
 
 import java.util.Map;
 

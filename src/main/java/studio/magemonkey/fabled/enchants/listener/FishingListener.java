@@ -1,13 +1,13 @@
 package studio.magemonkey.fabled.enchants.listener;
 
-import studio.magemonkey.fabled.enchants.api.Enchantments;
-import studio.magemonkey.fabled.enchants.data.ConfigKey;
-import studio.magemonkey.fabled.enchants.data.Configuration;
-import studio.magemonkey.fabled.enchants.mechanics.EnchantingMechanics;
 import org.bukkit.entity.Item;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.inventory.ItemStack;
+import studio.magemonkey.fabled.enchants.api.Enchantments;
+import studio.magemonkey.fabled.enchants.data.ConfigKey;
+import studio.magemonkey.fabled.enchants.data.Configuration;
+import studio.magemonkey.fabled.enchants.mechanics.EnchantingMechanics;
 
 import java.util.Random;
 

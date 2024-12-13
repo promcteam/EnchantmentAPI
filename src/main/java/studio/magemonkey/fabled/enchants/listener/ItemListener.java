@@ -1,8 +1,5 @@
 package studio.magemonkey.fabled.enchants.listener;
 
-import studio.magemonkey.fabled.enchants.api.Enchantments;
-import studio.magemonkey.fabled.enchants.api.Tasks;
-import studio.magemonkey.fabled.enchants.data.PlayerEquips;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -16,6 +13,9 @@ import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
+import studio.magemonkey.fabled.enchants.api.Enchantments;
+import studio.magemonkey.fabled.enchants.api.Tasks;
+import studio.magemonkey.fabled.enchants.data.PlayerEquips;
 
 import java.util.HashMap;
 import java.util.Map;

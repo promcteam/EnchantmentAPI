@@ -1,12 +1,6 @@
 package studio.magemonkey.fabled.enchants.api;
 
 import com.google.common.collect.ImmutableList;
-import studio.magemonkey.codex.mccore.config.CommentedConfig;
-import studio.magemonkey.codex.mccore.config.parse.DataSection;
-import studio.magemonkey.codex.mccore.util.TextFormatter;
-import studio.magemonkey.fabled.enchants.FabledEnchants;
-import studio.magemonkey.fabled.enchants.data.Permission;
-import studio.magemonkey.fabled.enchants.util.LoreReader;
 import org.apache.commons.lang3.Validate;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -22,6 +16,12 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.permissions.Permissible;
+import studio.magemonkey.codex.mccore.config.CommentedConfig;
+import studio.magemonkey.codex.mccore.config.parse.DataSection;
+import studio.magemonkey.codex.mccore.util.TextFormatter;
+import studio.magemonkey.fabled.enchants.FabledEnchants;
+import studio.magemonkey.fabled.enchants.data.Permission;
+import studio.magemonkey.fabled.enchants.util.LoreReader;
 
 import java.util.*;
 import java.util.stream.Collectors;

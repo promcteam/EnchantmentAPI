@@ -1,5 +1,11 @@
 package studio.magemonkey.fabled.enchants.cmd;
 
+import org.bukkit.Material;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.BookMeta;
+import org.bukkit.plugin.Plugin;
 import studio.magemonkey.codex.mccore.commands.ConfigurableCommand;
 import studio.magemonkey.codex.mccore.commands.IFunction;
 import studio.magemonkey.codex.mccore.items.ItemManager;
@@ -7,12 +13,6 @@ import studio.magemonkey.fabled.enchants.FabledEnchants;
 import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
 import studio.magemonkey.fabled.enchants.api.ItemSet;
 import studio.magemonkey.fabled.enchants.vanilla.VanillaEnchantment;
-import org.bukkit.Material;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.BookMeta;
-import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,9 +1,9 @@
 package studio.magemonkey.fabled.enchants.api;
 
+import org.bukkit.entity.LivingEntity;
 import studio.magemonkey.fabled.enchants.data.ConfigKey;
 import studio.magemonkey.fabled.enchants.data.Configuration;
 import studio.magemonkey.fabled.enchants.fabled.SkillEnchantment;
-import org.bukkit.entity.LivingEntity;
 
 import java.time.Clock;
 import java.util.HashMap;

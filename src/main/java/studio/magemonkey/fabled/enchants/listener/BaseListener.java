@@ -1,10 +1,10 @@
 package studio.magemonkey.fabled.enchants.listener;
 
-import studio.magemonkey.fabled.enchants.FabledEnchants;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Projectile;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import studio.magemonkey.fabled.enchants.FabledEnchants;
 
 /**
  * FabledEnchants © 2024 MageMonkeyStudio

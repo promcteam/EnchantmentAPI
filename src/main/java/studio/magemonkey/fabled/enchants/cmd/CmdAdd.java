@@ -1,5 +1,9 @@
 package studio.magemonkey.fabled.enchants.cmd;
 
+import org.bukkit.ChatColor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import studio.magemonkey.codex.mccore.commands.CommandManager;
 import studio.magemonkey.codex.mccore.commands.ConfigurableCommand;
 import studio.magemonkey.codex.mccore.commands.IFunction;
@@ -9,10 +13,6 @@ import studio.magemonkey.fabled.enchants.api.Enchantments;
 import studio.magemonkey.fabled.enchants.api.GlowEffects;
 import studio.magemonkey.fabled.enchants.api.Tasks;
 import studio.magemonkey.fabled.enchants.data.PlayerEquips;
-import org.bukkit.ChatColor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 
 import static studio.magemonkey.fabled.enchants.util.Utils.isPresent;
 

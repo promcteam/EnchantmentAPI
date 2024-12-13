@@ -1,5 +1,11 @@
 package studio.magemonkey.fabled.enchants.cmd;
 
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
 import studio.magemonkey.codex.mccore.commands.ConfigurableCommand;
 import studio.magemonkey.codex.mccore.commands.IFunction;
 import studio.magemonkey.fabled.enchants.FabledEnchants;
@@ -9,12 +15,6 @@ import studio.magemonkey.fabled.enchants.data.Configuration;
 import studio.magemonkey.fabled.enchants.data.Enchantability;
 import studio.magemonkey.fabled.enchants.mechanics.EnchantingMechanics;
 import studio.magemonkey.fabled.enchants.vanilla.Vanilla;
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.Plugin;
 
 import java.text.DecimalFormat;
 import java.util.*;

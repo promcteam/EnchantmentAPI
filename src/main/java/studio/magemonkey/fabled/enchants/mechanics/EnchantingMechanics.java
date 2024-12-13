@@ -1,14 +1,14 @@
 package studio.magemonkey.fabled.enchants.mechanics;
 
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.permissions.Permissible;
 import studio.magemonkey.fabled.enchants.FabledEnchants;
 import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
 import studio.magemonkey.fabled.enchants.data.ConfigKey;
 import studio.magemonkey.fabled.enchants.data.Configuration;
 import studio.magemonkey.fabled.enchants.data.Enchantability;
-import org.bukkit.Material;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.permissions.Permissible;
 
 import java.util.*;
 import java.util.stream.Collectors;

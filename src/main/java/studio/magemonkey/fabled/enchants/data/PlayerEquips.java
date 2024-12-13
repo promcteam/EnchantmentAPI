@@ -1,12 +1,12 @@
 package studio.magemonkey.fabled.enchants.data;
 
 import com.google.common.collect.ImmutableSet;
-import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
-import studio.magemonkey.fabled.enchants.api.Enchantments;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
+import studio.magemonkey.fabled.enchants.api.Enchantments;
 
 import java.util.HashMap;
 import java.util.Map;

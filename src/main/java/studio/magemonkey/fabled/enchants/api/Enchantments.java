@@ -1,8 +1,5 @@
 package studio.magemonkey.fabled.enchants.api;
 
-import studio.magemonkey.fabled.enchants.FabledEnchants;
-import studio.magemonkey.fabled.enchants.data.PlayerEquips;
-import studio.magemonkey.fabled.enchants.util.LoreReader;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -11,6 +8,9 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.EnchantmentStorageMeta;
 import org.bukkit.inventory.meta.ItemMeta;
+import studio.magemonkey.fabled.enchants.FabledEnchants;
+import studio.magemonkey.fabled.enchants.data.PlayerEquips;
+import studio.magemonkey.fabled.enchants.util.LoreReader;
 
 import java.util.HashMap;
 import java.util.List;

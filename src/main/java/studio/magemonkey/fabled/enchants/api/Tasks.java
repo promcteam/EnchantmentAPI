@@ -1,8 +1,8 @@
 package studio.magemonkey.fabled.enchants.api;
 
-import studio.magemonkey.fabled.enchants.FabledEnchants;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
+import studio.magemonkey.fabled.enchants.FabledEnchants;
 
 import java.util.Objects;
 

@@ -1,9 +1,5 @@
 package studio.magemonkey.fabled.enchants.listener;
 
-import studio.magemonkey.codex.mccore.util.TextFormatter;
-import studio.magemonkey.fabled.enchants.data.ConfigKey;
-import studio.magemonkey.fabled.enchants.data.Configuration;
-import studio.magemonkey.fabled.enchants.mechanics.EnchantmentMerger;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -15,6 +11,10 @@ import org.bukkit.event.inventory.PrepareAnvilEvent;
 import org.bukkit.inventory.AnvilInventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import studio.magemonkey.codex.mccore.util.TextFormatter;
+import studio.magemonkey.fabled.enchants.data.ConfigKey;
+import studio.magemonkey.fabled.enchants.data.Configuration;
+import studio.magemonkey.fabled.enchants.mechanics.EnchantmentMerger;
 
 import static studio.magemonkey.fabled.enchants.util.Utils.isPresent;
 
