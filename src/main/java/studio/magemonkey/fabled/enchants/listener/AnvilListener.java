@@ -12,6 +12,7 @@ import org.bukkit.inventory.AnvilInventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import studio.magemonkey.codex.mccore.util.TextFormatter;
+import studio.magemonkey.codex.util.StringUT;
 import studio.magemonkey.fabled.enchants.data.ConfigKey;
 import studio.magemonkey.fabled.enchants.data.Configuration;
 import studio.magemonkey.fabled.enchants.mechanics.EnchantmentMerger;
@@ -55,7 +56,7 @@ public class AnvilListener extends BaseListener {
 
 
             final ItemMeta meta = event.getResult().getItemMeta();
-            meta.setDisplayName(colored ? TextFormatter.colorString(text) : text);
+            meta.setDisplayName(colored ? StringUT.color(text) : text);
             event.getResult().setItemMeta(meta);
         }
     }

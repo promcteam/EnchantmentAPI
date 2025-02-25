@@ -19,6 +19,7 @@ import org.bukkit.permissions.Permissible;
 import studio.magemonkey.codex.mccore.config.CommentedConfig;
 import studio.magemonkey.codex.mccore.config.parse.DataSection;
 import studio.magemonkey.codex.mccore.util.TextFormatter;
+import studio.magemonkey.codex.util.StringUT;
 import studio.magemonkey.fabled.enchants.FabledEnchants;
 import studio.magemonkey.fabled.enchants.data.Permission;
 import studio.magemonkey.fabled.enchants.util.LoreReader;
@@ -628,8 +629,8 @@ public abstract class CustomEnchantment implements Comparable<CustomEnchantment>
         }
 
         final DataSection data = config.getConfig();
-        name = TextFormatter.colorString(data.getString(NAME, name));
-        description = TextFormatter.colorString(data.getString(DESCRIPTION, description));
+        name = StringUT.color(data.getString(NAME, name));
+        description = StringUT.color(data.getString(DESCRIPTION, description));
         enabled = data.getBoolean(ENABLED, enabled);
         setMaxLevel(data.getInt(MAX_LEVEL, maxLevel), data.getInt(MAX_TABLE_LEVEL, maxTableLevel));
         setGroup(data.getString(GROUP, group));
