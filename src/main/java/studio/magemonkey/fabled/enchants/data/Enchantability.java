@@ -111,6 +111,7 @@ public class Enchantability {
         IRON(9, 14),
         GOLD(25, 22, "GOLDEN"),
         DIAMOND(10, 10),
+        NETHERITE(15, 15),
         LEATHER(15, 0),
         CHAINMAIL(12, 0);
 
