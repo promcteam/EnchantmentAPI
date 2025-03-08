@@ -115,7 +115,7 @@ public class EnchantListener extends BaseListener {
                 event.getEnchanter(), item, event.getExpLevelCost(), true, seed);
 
         event.setCancelled(true);
-        if (result.getEnchantments().size() == 0) {
+        if (result.getEnchantments().isEmpty()) {
             return;
         }
         placeholders.remove(event.getEnchanter().getUniqueId());

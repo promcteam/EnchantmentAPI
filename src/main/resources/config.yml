@@ -6,11 +6,11 @@ max-enchantments: 3
 # when using an anvil
 max-merged-enchantments: 5
 #
-# Whether or not to let players use colors when
+# Whether to let players use colors when
 # renaming items in anvils
 colored-names-in-anvils: true
 #
-# Whether or not to allow normally non-enchantable
+# Whether to allow normally non-enchantable
 # items to be enchanted (e.g. blaze rods). This
 # will cause them to show up as books when placed
 # in an enchanting table.
@@ -21,7 +21,7 @@ non-enchantables: true
 # will use their max level instead.
 global-anvil-level: 0
 #
-# Whether or not custom enchantments can be obtained
+# Whether custom enchantments can be obtained
 # on items received while fishing
 custom-fishing: true
 #
